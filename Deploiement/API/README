@@ -1,0 +1,34 @@
+- COMMANDE BASH
+docker build -t IMAGE .
+
+docker run -p 4000:80 -e PORT=80 IMAGE
+
+- SUR POSTMAN
+Nouvelle requête
+Methode post sur http://localhost:4000/predict
+Allez dans l'onglet "Body", sélectionnez "raw" et choisissez "JSON" comme type.
+Collez le corps de votre requête JSON avec ce type de valeur (testez les valeurs que vous voulez) :
+{
+  "input": [
+    {
+      "age": 0,
+      "model_key": "string",
+      "mileage": 0,
+      "engine_power": 0,
+      "fuel": "string",
+      "paint_color": "string",
+      "car_type": "string",
+      "private_parking_available": true,
+      "has_gps": true,
+      "has_air_conditioning": true,
+      "automatic_car": true,
+      "has_getaround_connect": true,
+      "has_speed_regulator": true,
+      "winter_tires": true
+    }
+  ]
+}
+
+- SUR LE FRONT
+Swagger UI : http://localhost:4000/docs
+ReDoc : http://localhost:4000/redoc

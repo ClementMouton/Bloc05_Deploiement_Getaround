@@ -1,0 +1,7 @@
+- COMMANDE BASH
+docker build -t IMAGE .
+
+docker run -p 8501:8501 -e PORT=8501 IMAGE
+
+- URL STREAMLIT
+http://localhost:8501
